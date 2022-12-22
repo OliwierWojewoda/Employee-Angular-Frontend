@@ -8,8 +8,6 @@
     <th>BirthDate</th>
     <th>Phone</th>
     <th>Position</th>
-    <th>Event</th>
-    <th>Message</th>
   </thead>
    <tr *ngFor="let employee of employees.data">
     <td>{{employee.id}}</td>
@@ -21,7 +19,9 @@
     <td>{{employees.success}}</td>
     <td>{{employees.message}}</td>
     <td><button (click)="editEmployee(employee)">Edit</button></td>
-    </tr> 
+    </tr>
+    <td>{{employees.success}}</td>
+    <td>{{employees.message}}</td> 
 </table>
 
 <app-edit-employee [employee]="employeeToEdit" (employeesUpdated)="updateEmployeeList($event)"></app-edit-employee>
