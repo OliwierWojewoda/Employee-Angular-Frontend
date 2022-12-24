@@ -1,27 +1,13 @@
-<button (click)="initNewEmployee()">Add new Employee</button>
-
-<table>
-  <thead>
-    <th>ID</th>
-    <th>Name</th>
-    <th>SurName</th>
-    <th>BirthDate</th>
-    <th>Phone</th>
-    <th>Position</th>
-  </thead>
-   <tr *ngFor="let employee of employees.data">
-    <td>{{employee.id}}</td>
-    <td>{{employee.name}}</td>
-    <td>{{employee.surName}}</td>
-    <td>{{(employee.birthDate) | date:'yyyy-MM-dd'}}</td>
-    <td>{{employee.phone}}</td>
-    <td>{{employee.position}}</td> 
-    <td>{{employees.success}}</td>
-    <td>{{employees.message}}</td>
-    <td><button (click)="editEmployee(employee)">Edit</button></td>
-    </tr>
-    <td>{{employees.success}}</td>
-    <td>{{employees.message}}</td> 
-</table>
-
-<app-edit-employee [employee]="employeeToEdit" (employeesUpdated)="updateEmployeeList($event)"></app-edit-employee>
+<div class="navbar">
+<div class="menubar">
+  <ul class="Operations">
+    <li><a routerLink="employeeList">All Employees</a></li>
+    <li><a routerLink="birthdays">Upcoming Birthdays</a></li>
+    <li>Add new Employee</li>
+    <li>Edit Employee</li>
+    <li>Delete Employee</li>
+  </ul>
+</div>
+</div>
+<router-outlet></router-outlet>
+<!-- <app-edit-employee [employee]="employeeToEdit" (employeesUpdated)="updateEmployeeList($event)"></app-edit-employee> -->

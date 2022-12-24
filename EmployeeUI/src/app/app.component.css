@@ -1,0 +1,24 @@
+.navbar{
+    display: flex;
+    height: 6rem;
+    background-color: #1db830;
+    position: relative;
+    width: 100%;
+   min-width: 600px;
+}
+.menubar{
+    display: flex;
+    background-color:#31853b;
+    height: 2.9rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+li{
+  display: inline-block; 
+  padding: 0px 10px;
+  color: whitesmoke;
+  font-weight: 900;
+}
