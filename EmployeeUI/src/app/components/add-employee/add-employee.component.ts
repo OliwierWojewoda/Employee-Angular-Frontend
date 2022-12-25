@@ -4,12 +4,13 @@ import { myResponse } from 'src/app/models/Response';
 import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
-  selector: 'app-employee-list',
-  templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.css']
+  selector: 'app-add-employee',
+  templateUrl: './add-employee.component.html',
+  styleUrls: ['./add-employee.component.css']
 })
-export class EmployeeListComponent implements OnInit {
+export class AddEmployeeComponent implements OnInit {
 
+  title = 'EmployeeUI';
   employees:myResponse = new myResponse();
   employeeToEdit?: Employee;
   constructor(private employeeservice: EmployeeService){}
@@ -20,7 +21,8 @@ export class EmployeeListComponent implements OnInit {
   updateEmployeeList(employees: Employee[]){
     this.employees.data=employees;
   }
-  editEmployee(employee: Employee){
-    this.employeeToEdit = employee;
+  initNewEmployee(){
+    this.employeeToEdit = new Employee();
   }
+ 
 }

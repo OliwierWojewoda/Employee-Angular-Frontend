@@ -7,12 +7,14 @@ import { DatePipe } from '@angular/common';
 import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
 import { FormsModule } from '@angular/forms';
 import { EmployeeListComponent } from './components/employee-list/employee-list/employee-list.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EditEmployeeComponent,
     EmployeeListComponent,
+    AddEmployeeComponent,
   ],
   imports: [
     BrowserModule,
