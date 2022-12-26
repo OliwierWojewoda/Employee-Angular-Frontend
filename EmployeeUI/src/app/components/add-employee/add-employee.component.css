@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+    font-size: 3rem;
+    color:whitesmoke;
+}
+#outerdiv{
+   background-color: darkgrey; 
+   width: 100vw;
+    height: 100vh;
+}
+#form{
+    font-size: 1rem;
+}
+#formdiv{
+    display: flex;
+    justify-content: center;
+}
+.inputs{
+    padding-top: 1.5rem;
+}
+input{
+    width: 100%;
+    padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+#savebutton{
+    background-color: gray;
+    border: 1px solid darkgray;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    cursor: pointer;
+    margin-left: 100px;
+}

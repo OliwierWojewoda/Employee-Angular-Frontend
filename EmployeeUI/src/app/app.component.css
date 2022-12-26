@@ -22,3 +22,15 @@ li{
   color: whitesmoke;
   font-weight: 900;
 }
+a{
+  color: whitesmoke;
+  text-decoration: none; 
+}
+a:visited{
+  text-decoration: none;
+}
+a:hover, a:active{
+  color: hsla(0, 0%, 20%, 0.6);
+  text-decoration: none; 
+}
+

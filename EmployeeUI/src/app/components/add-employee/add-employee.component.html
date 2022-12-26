@@ -1,32 +1,31 @@
-<h1>Add New Employee</h1>
-<form #form="ngForm" (ngSubmit)="addEmployee(addEmployeeReq)">
-     <div>
-        <label for="name">Name</label>
-        <input type="text" id="name"
-        name ="name" [(ngModel)] ="addEmployeeReq.name">
-    </div>
-    
-    <div>
-        <label for="surName">Surname</label>
-        <input type="text" id="surName"
-        name ="surName" [(ngModel)] ="addEmployeeReq.surName">
-    </div>
-    <div>
-        <label for="phone">Phone</label>
-        <input type="text" id="phone"
-        name ="phone" [(ngModel)] ="addEmployeeReq.phone">
-    </div>
-    <div>
-        <label for="Birtdate">Birthdate</label>
-        <input type="text" id="birthDate"
-        name ="birthDate" [(ngModel)] ="addEmployeeReq.birthDate">
-    </div>
-    <div>
-        <label for="position">Position</label>
-        <input type="text" id="position"
-        name ="position" [(ngModel)] ="addEmployeeReq.position">
-    </div>
-    <div>
-        <button type="submit">Save</button>
-    </div>
-</form>
+<div id="outerdiv">
+    <h1>Add New Employee</h1>
+    <div id="formdiv"> 
+    <form id="form" #form="ngForm" (ngSubmit)="addEmployee(addEmployeeReq)">
+        <div class="inputs">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" [(ngModel)]="addEmployeeReq.name">
+        </div>
+
+        <div class="inputs">
+            <label for="surName">Surname: </label>
+            <input type="text" id="surName" name="surName" [(ngModel)]="addEmployeeReq.surName">
+        </div>
+        <div class="inputs">
+            <label for="phone">Phone: </label>
+            <input type="text" id="phone" name="phone" [(ngModel)]="addEmployeeReq.phone">
+        </div>
+        <div class="inputs">
+            <label for="Birtdate">Birthdate: </label>
+            <input type="text" id="birthDate" name="birthDate" [(ngModel)]="addEmployeeReq.birthDate">
+        </div>
+        <div class="inputs">
+            <label for="position">Position: </label>
+            <input type="text" id="position" name="position" [(ngModel)]="addEmployeeReq.position">
+        </div>
+        <div class="inputs">
+            <button id="savebutton" type="submit">Save</button>
+        </div>
+    </form>
+ </div>
+</div>

@@ -16,7 +16,7 @@
         <td>{{(employee.birthDate) | date:'yyyy-MM-dd'}}</td>
         <td>{{employee.phone}}</td>
         <td>{{employee.position}}</td> 
-         <td><button (click)="editEmployee(employee)">Edit</button></td> 
+        <button id="editbutton" (click)="editEmployee(employee)">Edit</button>
         </tr>
     </table>
     {{employees.success}}
