@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Employee } from 'src/app/models/get-employee';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { Employee, Position } from 'src/app/models/get-employee';
 import { myResponse } from 'src/app/models/Response';
 import { EmployeeService } from 'src/app/services/employee.service';
 
@@ -10,19 +11,30 @@ import { EmployeeService } from 'src/app/services/employee.service';
 })
 export class AddEmployeeComponent implements OnInit {
 
+  // @Output() employeesUpdated = new EventEmitter<Employee[]>();
+
   title = 'EmployeeUI';
-  employees:myResponse = new myResponse();
-  employeeToEdit?: Employee;
-  constructor(private employeeservice: EmployeeService){}
-    ngOnInit() : void{
-      this.employeeservice.getEmployees().subscribe
-      ((result: myResponse) => (this.employees = result));
-    }
-  updateEmployeeList(employees: Employee[]){
-    this.employees.data=employees;
+  // employees:myResponse = new myResponse();
+  addEmployeeReq: Employee={
+    name :'',
+    surName: '',
+    birthDate: '',
+    phone: '',
+    position: Position.Physical 
   }
-  initNewEmployee(){
-    this.employeeToEdit = new Employee();
-  }
- 
+  constructor(private employeeService: EmployeeService, private router: Router){}
+    ngOnInit() : void{}
+  // addEmployee(employee:Employee){
+  //   this.employeeService.addEmployee(employee)
+  //   .subscribe((employees: Employee[]) => 
+  //   this.employeesUpdated.emit(employees));
+  // }
+     addEmployee(employee: Employee){
+      this.employeeService.addEmployee(this.addEmployeeReq)
+      .subscribe({
+        next: (employee) => {
+          this.router.navigate(['employeeList']);
+        }
+      })
+     }
 }

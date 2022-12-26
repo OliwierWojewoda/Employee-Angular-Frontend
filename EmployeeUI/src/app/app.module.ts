@@ -20,7 +20,7 @@ import { AddEmployeeComponent } from './components/add-employee/add-employee.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
