@@ -1,0 +1,51 @@
+.tableHeader{
+    text-align: left;
+    background-color: lightgray;
+    padding: 5px 5px 5px 5px;
+}
+th{
+border: 2px solid darkgray;
+}
+.idHeader{
+    min-width: 30px;
+}
+.nameHeader{
+    min-width: 100px;
+}
+.surnameHeader{
+    min-width: 150px;
+}
+.birthdateHeader{
+    min-width: 100px;
+}
+.phoneHeader{
+    min-width: 120px;
+}
+.positionHeader{
+    min-width: 100px;
+}
+.tablemain td{
+    border-top:2px solid darkgrey;
+    border-right: 2px solid darkgrey;
+    border-left: 2px solid darkgrey;
+    border-bottom:2px solid darkgrey ;
+    padding: 5px 5px 5px 5px;
+    height: 50px;
+}
+table {
+    width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+a{
+    background-color: gray;
+    border: 1px solid darkgray;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+  

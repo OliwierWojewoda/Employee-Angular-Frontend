@@ -1,2 +1,23 @@
-<p>upcoming-birthdays works!</p>
-
+<div class="table">
+    <table>
+      <thead class="tableHeader">
+        <th class="idHeader">ID</th>
+        <th class="nameHeader">Name</th>
+        <th class="surnameHeader">SurName</th>
+        <th class="birthdateHeader">BirthDate</th>
+        <th class="phoneHeader">Phone</th>
+        <th class="positionHeader">Position</th>
+      </thead>
+       <tr class="tablemain" *ngFor="let employee of employees.data">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.surName}}</td>
+        <td>{{(employee.birthDate) | date:'yyyy-MM-dd'}}</td>
+        <td>{{employee.phone}}</td>
+        <td>{{employee.position}}</td> 
+        </tr>
+    </table>
+    {{employees.success}}
+    {{employees.message}}
+    </div>
+   

@@ -8,6 +8,7 @@ import { EditEmployeeComponent } from './components/edit-employee/edit-employee.
 import { FormsModule } from '@angular/forms';
 import { EmployeeListComponent } from './components/employee-list/employee-list/employee-list.component';
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { UpcomingBirthdaysComponent } from './components/upcoming-birthdays/upcoming-birthdays.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AddEmployeeComponent } from './components/add-employee/add-employee.com
     EditEmployeeComponent,
     EmployeeListComponent,
     AddEmployeeComponent,
+    UpcomingBirthdaysComponent
   ],
   imports: [
     BrowserModule,

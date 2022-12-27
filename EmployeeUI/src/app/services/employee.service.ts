@@ -33,4 +33,7 @@ export class EmployeeService {
     return this.http.post<Employee[]>(`${environment.apiUrl}/${this.url}`
     , employee);
   }
+  public getBirthdays() : Observable<myResponse> {
+    return this.http.get<myResponse>(`${environment.apiUrl}/${this.url}/GetBirthdays`);
+  }
 }
