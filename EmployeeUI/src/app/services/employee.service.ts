@@ -42,4 +42,7 @@ export class EmployeeService {
   public getSortedByBirthDate(): Observable<myResponse> {
     return this.http.get<myResponse>(`${environment.apiUrl}/${this.url}/BirthDaySorted`);
   }
+  public getSearched(searchWord: string): Observable<myResponse> {
+    return this.http.get<myResponse>(`${environment.apiUrl}/${this.url}/GetSearched?searchWord=${searchWord}`);
+  }
 }

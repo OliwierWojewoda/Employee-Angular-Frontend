@@ -15,7 +15,4 @@ export class AppComponent {
       this.employeeservice.getEmployees().subscribe
       ((result: myResponse) => (this.employees = result));
     }
-  updateEmployeeList(employees: Employee[]){
-    this.employees.data=employees;
-  }
 }
