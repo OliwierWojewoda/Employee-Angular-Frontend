@@ -10,7 +10,6 @@ import { myResponse } from './models/Response';
 export class AppComponent {
   title = 'EmployeeUI';
   employees:myResponse = new myResponse();
-  employeeToEdit?: Employee;
   constructor(private employeeservice: EmployeeService){}
     ngOnInit() : void{
       this.employeeservice.getEmployees().subscribe
@@ -19,11 +18,4 @@ export class AppComponent {
   updateEmployeeList(employees: Employee[]){
     this.employees.data=employees;
   }
-  initNewEmployee(){
-    this.employeeToEdit = new Employee();
-  }
-  editEmployee(employee: Employee){
-    this.employeeToEdit = employee;
-  }
- 
 }
