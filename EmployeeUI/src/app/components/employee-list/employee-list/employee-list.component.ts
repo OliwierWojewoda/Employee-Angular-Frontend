@@ -20,7 +20,4 @@ export class EmployeeListComponent implements OnInit {
   updateEmployeeList(employees: Employee[]){
     this.employees.data=employees;
   }
-  editEmployee(employee: Employee){
-    this.employeeToEdit = employee;
-  }
 }

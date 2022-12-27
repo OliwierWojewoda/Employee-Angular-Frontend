@@ -1,25 +1,37 @@
-<div *ngIf="employee">
-    <h2>{{employee.name}}</h2>
-    <div>
-        Name:
-        <input [(ngModel)]="employee.name" placeholder="Name"/>
-    </div>
-    <div>
-        SurName:
-        <input [(ngModel)]="employee.surName" placeholder="SurName"/>
-    </div>
-    <div>
-        BirthDate:
-        <input [(ngModel)]="employee.birthDate" placeholder="BirthDate"/>
-    </div>
-    <div>
-        Phone:
-        <input [(ngModel)]="employee.phone" placeholder="Phone"/>
-    </div>
-    <div>
-        Position:
-        <input [(ngModel)]="employee.position" placeholder="Position"/>
-    </div>
-    <button (click)="updateEmployee(employee)" *ngIf="employee.id">Save</button>
-    <button (click)="deleteEmployee(employee)" *ngIf="employee.id">Delete</button>
+<div id="outerdiv">
+    <h1>Edit Employee</h1>
+    <div id="formdiv"> 
+    <form id="form" #form="ngForm" (ngSubmit)="updateEmployee()">
+        <div class="inputs">
+            <label for="id">ID: </label>
+            <input type="text" id="id" readonly name="id" [(ngModel)]="employeeDetails.id">
+        </div>
+
+        <div class="inputs">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" [(ngModel)]="employeeDetails.name">
+        </div>
+
+        <div class="inputs">
+            <label for="surName">Surname: </label>
+            <input type="text" id="surName" name="surName" [(ngModel)]="employeeDetails.surName">
+        </div>
+        <div class="inputs">
+            <label for="phone">Phone: </label>
+            <input type="text" id="phone" name="phone" [(ngModel)]="employeeDetails.phone">
+        </div>
+        <div class="inputs">
+            <label for="Birtdate">Birthdate: </label>
+            <input type="text" id="birthDate" name="birthDate" [ngModel]="employeeDetails.birthDate | date:'yyyy-MM-dd'">
+        </div>
+        <div class="inputs">
+            <label for="position">Position: </label>
+            <input type="text" id="position" name="position" [(ngModel)]="employeeDetails.position">
+        </div>
+        <div class="inputs">
+            <button id="savebutton" type="submit">Save</button>
+            <button id="deletebutton" type="button" (click)="deleteEmployee(employeeDetails.id!)">Delete</button>
+        </div>
+    </form>
+ </div>
 </div>

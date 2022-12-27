@@ -15,6 +15,10 @@ export class EmployeeService {
   private url ="Employee"
   constructor(private http: HttpClient) { }
 
+  public getEmployeeById(id:string) : Observable<Employee> {
+    return this.http.get<Employee>(`${environment.apiUrl}/${this.url}/GetBy${id}`);
+  }
+
   public getEmployees() : Observable<myResponse> {
     return this.http.get<myResponse>(`${environment.apiUrl}/${this.url}/GetAll`);
   }
@@ -22,8 +26,8 @@ export class EmployeeService {
     return this.http.put<Employee[]>(`${environment.apiUrl}/${this.url}/${employee.id}`, 
     employee);
   }
-  public deleteEmployee(employee:Employee) : Observable<Employee[]> {
-    return this.http.delete<Employee[]>(`${environment.apiUrl}/${this.url}/${employee.id}`);
+  public deleteEmployee(id: string ) : Observable<Employee[]> {
+    return this.http.delete<Employee[]>(`${environment.apiUrl}/${this.url}/${id}`);
   }
   public addEmployee(employee:Employee) : Observable<Employee[]> {
     return this.http.post<Employee[]>(`${environment.apiUrl}/${this.url}`

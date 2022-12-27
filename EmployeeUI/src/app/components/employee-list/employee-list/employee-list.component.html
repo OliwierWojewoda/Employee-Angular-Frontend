@@ -16,10 +16,10 @@
         <td>{{(employee.birthDate) | date:'yyyy-MM-dd'}}</td>
         <td>{{employee.phone}}</td>
         <td>{{employee.position}}</td> 
-        <button id="editbutton" (click)="editEmployee(employee)">Edit</button>
+        <a [routerLink]="['/editEmployee',employee.id]">View</a>
         </tr>
     </table>
     {{employees.success}}
     {{employees.message}}
     </div>
-    <app-edit-employee [employee]="employeeToEdit" (employeesUpdated)="updateEmployeeList($event)"></app-edit-employee>
+   
