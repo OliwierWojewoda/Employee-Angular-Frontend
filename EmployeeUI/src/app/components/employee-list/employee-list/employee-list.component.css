@@ -47,4 +47,9 @@ a{
     font-size: 16px;
     cursor: pointer;
 }
+button{
+    margin-left: 5px;
+    background-color: lightgray;
+    border: none;
+}
   

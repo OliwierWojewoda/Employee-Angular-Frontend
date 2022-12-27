@@ -12,28 +12,34 @@ import { myResponse } from '../models/Response';
 
 export class EmployeeService {
 
-  private url ="Employee"
+  private url = "Employee"
   constructor(private http: HttpClient) { }
 
-  public getEmployeeById(id:string) : Observable<Employee> {
+  public getEmployeeById(id: string): Observable<Employee> {
     return this.http.get<Employee>(`${environment.apiUrl}/${this.url}/GetBy${id}`);
   }
 
-  public getEmployees() : Observable<myResponse> {
+  public getEmployees(): Observable<myResponse> {
     return this.http.get<myResponse>(`${environment.apiUrl}/${this.url}/GetAll`);
   }
-  public updateEmployee(employee:Employee) : Observable<Employee[]> {
-    return this.http.put<Employee[]>(`${environment.apiUrl}/${this.url}/${employee.id}`, 
-    employee);
+  public updateEmployee(employee: Employee): Observable<Employee[]> {
+    return this.http.put<Employee[]>(`${environment.apiUrl}/${this.url}/${employee.id}`,
+      employee);
   }
-  public deleteEmployee(id: string ) : Observable<Employee[]> {
+  public deleteEmployee(id: string): Observable<Employee[]> {
     return this.http.delete<Employee[]>(`${environment.apiUrl}/${this.url}/${id}`);
   }
-  public addEmployee(employee:Employee) : Observable<Employee[]> {
+  public addEmployee(employee: Employee): Observable<Employee[]> {
     return this.http.post<Employee[]>(`${environment.apiUrl}/${this.url}`
-    , employee);
+      , employee);
   }
-  public getBirthdays() : Observable<myResponse> {
+  public getBirthdays(): Observable<myResponse> {
     return this.http.get<myResponse>(`${environment.apiUrl}/${this.url}/GetBirthdays`);
+  }
+  public getSortedBySurname(): Observable<myResponse> {
+    return this.http.get<myResponse>(`${environment.apiUrl}/${this.url}/SurnameSorted`);
+  }
+  public getSortedByBirthDate(): Observable<myResponse> {
+    return this.http.get<myResponse>(`${environment.apiUrl}/${this.url}/BirthDaySorted`);
   }
 }

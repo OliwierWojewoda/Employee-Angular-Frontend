@@ -2,10 +2,10 @@
 <div class="table">
     <table>
       <thead class="tableHeader">
-        <th class="idHeader">ID</th>
+        <th class="idHeader">ID<button (click)="ngOnInit()"><img src="assets/sorting.jpg" width="15" height="15"></button></th>
         <th class="nameHeader">Name</th>
-        <th class="surnameHeader">SurName</th>
-        <th class="birthdateHeader">BirthDate</th>
+        <th class="surnameHeader">SurName<button (click)="sortSurname()"><img src="assets/sorting.jpg" width="15" height="15"></button></th>
+        <th class="birthdateHeader">BirthDate<button (click)="sortBirthDate()"><img src="assets/sorting.jpg" width="15" height="15"></button></th>
         <th class="phoneHeader">Phone</th>
         <th class="positionHeader">Position</th>
       </thead>
